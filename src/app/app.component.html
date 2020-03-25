@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <nav class="nav justify-content-center">
+          <a class="nav-link active" routerLink="/dashboard">Dashboard</a>
+          <a class="nav-link" routerLink="/heroes">Heroes</a>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <h1>{{title}}</h1>
+      <router-outlet></router-outlet>
+      <app-messages></app-messages>
+    </div>
+  </div>
+</div>
