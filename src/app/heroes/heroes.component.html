@@ -1,8 +1,17 @@
 <h2>My Heroes</h2>
+
+<div>
+  <h3>Add Hero</h3>
+  <input type="text" [(ngModel)]="heroName" >
+  <button type="submit" (click)="add(heroName); heroName='' "
+   [disabled]="!heroName">ADD HERO</button>
+</div>
+
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">
-    <a >
+  <li *ngFor="let hero of heroes" >
+    <a routerLink="/details/{{hero.id}}" style="width: 185px; float:left;">
       <span class="badge">{{hero.id}}</span>{{hero.name}}
     </a>
+    <button class="btn btn-danger" (click)="deleteHero(hero)" >X</button>
   </li>
 </ul>
